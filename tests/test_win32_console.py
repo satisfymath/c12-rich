@@ -136,6 +136,7 @@ if sys.platform == "win32":
         assert first_args == (win32_handle,)
         assert first_kwargs["attributes"].value == expected_attr
 
+    del test_write_styled_reverse
     @patch.object(_win32_console, "SetConsoleTextAttribute")
     def test_write_styled_reverse(
         SetConsoleTextAttribute, win32_console_getters, win32_handle
